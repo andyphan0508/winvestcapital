@@ -34,10 +34,9 @@ jobs:
         run: npm ci
 
       - name: Build
+        # Dùng tên miền riêng (custom domain) -> site chạy từ gốc "/",
+        # nên KHÔNG set BASE_PATH (vite.config mặc định base = "/").
         run: npm run build
-        env:
-          # Phải khớp tên repo: https://<user>.github.io/winvestcapital/
-          BASE_PATH: /winvestcapital/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

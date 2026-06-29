@@ -49,12 +49,12 @@ export default function Closing() {
                 www.winvestcapital.vn
               </a>
               <span>Đà Nẵng, Việt Nam</span>
-              <span>Confidential Profile · {brand.date}</span>
+              <span>Hồ sơ Doanh nghiệp · {brand.date}</span>
             </div>
           </div>
         </div>
         <div className="footer__bar">
-          <span>© 2026 Winvest Capital. Tài liệu mật phục vụ mục đích trình bày.</span>
+          <span>© 2026 Winvest Capital. Bảo lưu mọi quyền.</span>
         </div>
       </footer>
     </>

@@ -507,7 +507,7 @@ export const closing = {
   name: 'WINVEST CAPITAL',
   tagline: 'Kiến tạo hạ tầng tài chính cho tương lai toàn cầu của Việt Nam.',
   website: 'www.winvestcapital.vn',
-  note: 'Confidential Profile',
+  note: 'Hồ sơ Doanh nghiệp',
 }
 
 export const navItems = [
