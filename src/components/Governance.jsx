@@ -1,6 +1,16 @@
 import { riskShield, partnership, leadership } from '../data/content'
 import SectionHeader from './SectionHeader'
 
+// Bỏ kính ngữ (Ông/Bà/...) rồi lấy chữ cái đầu mỗi từ làm chữ lồng, vd "CMC".
+function monogram(name) {
+  return name
+    .replace(/^(Ông|Bà|Anh|Chị|Mr\.?|Ms\.?|Mrs\.?)\s+/i, '')
+    .split(/\s+/)
+    .map((w) => w[0])
+    .join('')
+    .toUpperCase()
+}
+
 export default function Governance() {
   return (
     <section className="section section--navy" id="quan-tri">
@@ -52,14 +62,23 @@ export default function Governance() {
         </div>
         <div className="grid grid-4 reveal leaders">
           {leadership.map((p, i) => (
-            <div className="leader" key={i}>
-              <div className="leader__avatar" aria-hidden="true">
-                {p.name.split(' ').slice(-1)[0].charAt(0)}
+            <figure className="leader" key={i}>
+              <div className="leader__frame">
+                {p.photo ? (
+                  <img className="leader__photo" src={p.photo} alt={p.name} loading="lazy" />
+                ) : (
+                  <span className="leader__monogram" aria-hidden="true">
+                    {monogram(p.name)}
+                  </span>
+                )}
               </div>
-              <h4 className="leader__name">{p.name}</h4>
-              <div className="leader__role">{p.role}</div>
-              <p className="leader__bio">{p.bio}</p>
-            </div>
+              <figcaption className="leader__caption">
+                <h4 className="leader__name">{p.name}</h4>
+                <div className="leader__role">{p.role}</div>
+                <span className="leader__rule" aria-hidden="true" />
+                <p className="leader__bio">{p.bio}</p>
+              </figcaption>
+            </figure>
           ))}
         </div>
       </div>
