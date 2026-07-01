@@ -25,9 +25,8 @@ export default function DficTower() {
               </div>
             </div>
             <div className="tower__right">
-              <div className="tower__silhouette" aria-hidden="true">
-                <span className="tower__a" />
-                <span className="tower__b" />
+              <div className="tower__image-container">
+                <img className="tower__image" src="/images/dfic_tower_render.png" alt="DFIC Tower Render" loading="lazy" />
               </div>
               <div className="tower__facts">
                 {dficTower.facts.map((f, i) => (

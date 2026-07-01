@@ -20,9 +20,9 @@ export default function Hero() {
         <div className="hero__date">{brand.date}</div>
 
         <div className="hero__actions">
-          <a href="#vifc-dn" className="btn btn--gold">
+          <a href="#vifc-dn" className="btn btn--gold shimmer-btn">
             Khám phá VIFC-DN
-            <span aria-hidden="true">→</span>
+            <span aria-hidden="true">&nbsp;→</span>
           </a>
           <a href="#gioi-thieu" className="btn btn--ghost">
             Về Winvest Capital
