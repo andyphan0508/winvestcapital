@@ -83,7 +83,9 @@ export default function DigitalVietnam() {
           <div className="cmc reveal">
             {cmcStack.layers.map((l, i) => (
               <div className={`cmc__layer cmc__layer--${i}`} key={i}>
-                <div className="cmc__layer-tag">{['APP', 'AI', 'CHAIN'][i]}</div>
+                <div className="cmc__layer-tag">
+                  <img src={['/images/tech_icon_app.png', '/images/tech_icon_ai.png', '/images/tech_icon_chain.png'][i]} alt={['APP', 'AI', 'CHAIN'][i]} loading="lazy" />
+                </div>
                 <div className="cmc__layer-body">
                   <h4>
                     {l.title} <span>— {l.sub}</span>

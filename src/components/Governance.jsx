@@ -23,9 +23,8 @@ export default function Governance() {
 
         {/* Risk shield — 5 concentric layers */}
         <div className="shield reveal">
-          <div className="shield__rings" aria-hidden="true">
-            <span /><span /><span /><span />
-            <div className="shield__core">🛡</div>
+          <div className="shield__graphic-container">
+            <img className="shield__graphic float-img" src="/images/risk_shield_graphic.png" alt="Lá chắn rủi ro & tuân thủ" loading="lazy" />
           </div>
           <ol className="shield__list">
             {riskShield.layers.map((l) => (
